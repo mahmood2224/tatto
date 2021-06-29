@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "791177670611",
+    "project_id": "tato-4ec05",
+    "storage_bucket": "tato-4ec05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791177670611:android:64d9d595d2bba1807e0926",
+        "android_client_info": {
+          "package_name": "com.iraqsoft.tato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791177670611-kii1gumkm9lthpif06c62ck12ldj7bs7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy1FYam0m2PFmtwsEEeVvLPjlfBt3SVfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791177670611-kii1gumkm9lthpif06c62ck12ldj7bs7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

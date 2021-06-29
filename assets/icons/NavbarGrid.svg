@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+  <g id="NavbarGrid" transform="translate(-326 -42)">
+    <g id="Rectangle_23" data-name="Rectangle 23" transform="translate(336 42)" fill="#fff" stroke="#f85252" stroke-width="1.7">
+      <rect width="9" height="9" rx="2.25" stroke="none"/>
+      <rect x="0.85" y="0.85" width="7.3" height="7.3" rx="1.4" fill="none"/>
+    </g>
+    <g id="Rectangle_24" data-name="Rectangle 24" transform="translate(326 42)" fill="#fff" stroke="#f85252" stroke-width="1.7">
+      <rect width="9" height="9" rx="2.25" stroke="none"/>
+      <rect x="0.85" y="0.85" width="7.3" height="7.3" rx="1.4" fill="none"/>
+    </g>
+    <g id="Rectangle_25" data-name="Rectangle 25" transform="translate(326 52)" fill="#fff" stroke="#f85252" stroke-width="1.7">
+      <rect width="9" height="9" rx="2.25" stroke="none"/>
+      <rect x="0.85" y="0.85" width="7.3" height="7.3" rx="1.4" fill="none"/>
+    </g>
+    <g id="Rectangle_26" data-name="Rectangle 26" transform="translate(336 52)" fill="#fff" stroke="#f85252" stroke-width="1.7">
+      <rect width="9" height="9" rx="2.25" stroke="none"/>
+      <rect x="0.85" y="0.85" width="7.3" height="7.3" rx="1.4" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+name: tato
+description: A new Flutter application.
+
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  font_awesome_flutter:
+  http: ^0.12.0+2
+  flutter_svg: ^0.19.3
+  carousel_slider: ^1.3.1
+  url_launcher:
+  intl:
+  shared_preferences:
+  easy_localization:
+  cupertino_icons:
+  device_info:
+  flutter_styled_toast:
+  firebase_messaging:
+  firebase_analytics:
+  qr_flutter:
+  firebase_core:
+  pull_to_refresh: 1.6.4
+  share:
+  flutter_html:
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  dapackages: ^1.1.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/lang/
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/cairoregular.ttf
+        - asset: assets/fonts/cairobold.ttf
+          weight: 700
+        - asset: assets/fonts/cairosemibold.ttf
+          weight: 600
