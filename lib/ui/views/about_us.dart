@@ -71,9 +71,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
             data: """
                   ${response?.about_us??""}
                 """,
-            onLinkTap: (url) {
-              print("Opening $url...");
-            },
+        
           ),
               SizedBox(height: 16,),
               InkWell(

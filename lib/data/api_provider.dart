@@ -37,9 +37,10 @@ class ApiProvider {
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
 
+    var url = Uri.parse("$BASE_URL$SLIDER_END_POINT");
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$SLIDER_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -78,9 +79,10 @@ class ApiProvider {
     }
 
     var data = json.encode({"mac_address":macAddress});
-
+    var url = Uri.parse("$BASE_URL$LOGIN_END_POINT");
+    
     http.Response response = await http.post(
-        "$BASE_URL$LOGIN_END_POINT",
+        url,
         headers: headers ,body: data);
 
     // Decoding Response.
@@ -115,9 +117,9 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
-
+    var url = Uri.parse("$BASE_URL$PRODUCTS_END_POINT${searchTxt != null ? "?search_txt=$searchTxt" : ""}");
     http.Response response = await http.get(
-        "$BASE_URL$PRODUCTS_END_POINT${searchTxt != null ? "?search_txt=$searchTxt" : ""}",
+        url,
         headers: headers);
 
     // Decoding Response.
@@ -148,9 +150,9 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
-
+    var url = Uri.parse("$BASE_URL$CATEGORY_END_POINT");
     http.Response response =
-        await http.get("$BASE_URL$CATEGORY_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -186,7 +188,8 @@ class ApiProvider {
 
     //data handling
     var body = json.encode({"product_id": productId, "qty": qty});
-    http.Response response = await http.post("$BASE_URL$ADD_TO_CART_END_POINT",
+    var url = Uri.parse("$BASE_URL$ADD_TO_CART_END_POINT");
+    http.Response response = await http.post(url,
         headers: headers, body: body);
 
     // Decoding Response.
@@ -220,11 +223,11 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
-
+    var url = Uri.parse("$BASE_URL$ADD_NOTES_TO_CART_END_POINT");
     //data handling
     var body = json.encode({"products": products});
     http.Response response = await http.post(
-        "$BASE_URL$ADD_NOTES_TO_CART_END_POINT",
+        url,
         headers: headers,
         body: body);
 
@@ -259,10 +262,10 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
-
+var url = Uri.parse("$BASE_URL$REMOVE_CART_END_POINT");
     //data handling
     var body = json.encode({"product_id": productId});
-    http.Response response = await http.post("$BASE_URL$REMOVE_CART_END_POINT",
+    http.Response response = await http.post(url,
         headers: headers, body: body);
 
     // Decoding Response.
@@ -293,10 +296,11 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$GET_CART_END_POINT");
 
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$GET_CART_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -327,10 +331,11 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$NOTIFICATION_END_POINT");
 
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$NOTIFICATION_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -360,10 +365,11 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$ORDER_END_POINT");
 
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$ORDER_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -393,10 +399,11 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$COUNT_END_POINT");
 
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$COUNT_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -426,10 +433,11 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$ORDER_TYPE_END_POINT");
 
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$ORDER_TYPE_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -459,10 +467,11 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$ABOUT_US_END_POINT");
 
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$ABOUT_US_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -494,9 +503,11 @@ class ApiProvider {
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
 
     print("$BASE_URL$COLOR_END_POINT");
+    var url = Uri.parse("$BASE_URL$COLOR_END_POINT");
+
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$COLOR_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     print("${response.request.url}");
     // Decoding Response.
@@ -527,10 +538,11 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$DISCOUNT_END_POINT?total_price=$totalPrice&order_type=$type");
 
     //data handling
     http.Response response = await http.get(
-        "$BASE_URL$DISCOUNT_END_POINT?total_price=$totalPrice&order_type=$type",
+        url,
         headers: headers);
 
     // Decoding Response.
@@ -559,9 +571,11 @@ class ApiProvider {
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
 
+    var url = Uri.parse("$BASE_URL$ZONES_END_POINT");
+
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$ZONES_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -591,10 +605,11 @@ class ApiProvider {
     String token = await getToken();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$BRANCHES_END_POINT");
 
     //data handling
     http.Response response =
-        await http.get("$BASE_URL$BRANCHES_END_POINT", headers: headers);
+        await http.get(url, headers: headers);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -633,8 +648,11 @@ class ApiProvider {
     String endPoint = data.orderType == PLACE
         ? MAKE_ORDER_PLACE_END_POINT
         : MAKE_ORDER_END_POINT;
+
+    var url = Uri.parse("$BASE_URL$endPoint");
+
     http.Response response =
-        await http.post("$BASE_URL$endPoint", headers: headers, body: body);
+        await http.post(url, headers: headers, body: body);
 
     // Decoding Response.
     Map<String, dynamic> decoded = json.decode(response.body);
@@ -665,11 +683,12 @@ class ApiProvider {
     int userId = await getUserId();
     var headers;
     headers = {"lang": lang, "Authorization": token, ...apiHeaders};
+    var url = Uri.parse("$BASE_URL$SAVE_FCM_TOKEN_END_POINT");
 
     //data handling
     var body = json.encode({"fcm_token": FCMtoken});
     http.Response response = await http.post(
-        "$BASE_URL$SAVE_FCM_TOKEN_END_POINT",
+        url,
         headers: headers,
         body: body);
 
